@@ -1,0 +1,23 @@
+label: Dishes
+type: structure
+columns:
+  dish: true
+  description: true
+  price:
+    before: €
+    align: right
+fields:
+  dish:
+    label: Dish
+    type: text
+    width: 1/3
+  description:
+    label: Description
+    type: text
+    width: 1/3
+  price:
+    label: Price
+    type: number
+    before: €
+    step: 0.01
+    width: 1/3

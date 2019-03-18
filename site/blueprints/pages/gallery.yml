@@ -1,0 +1,18 @@
+title: Gallery
+icon: 🖼
+
+
+sections:
+  images:
+    headline: Images
+    type: files
+    template: gallery-image
+    empty: No images yet
+    layout: cards
+    size: small
+    info: "{{ file.dimensions }}"
+    image:
+      cover: false
+      back: black
+      ratio: 1/1
+

@@ -1,3 +1,9 @@
 title: Site
-preset: pages
-unlisted: true
+
+sections:
+  examples:
+    headline: Examples
+    status: listed
+    text: "{{ page.blueprint.title }}"
+    type: pages
+    image: false

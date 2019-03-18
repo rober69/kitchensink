@@ -1,0 +1,25 @@
+title: PageTable Section Plugin
+icon: 📋
+
+sections:
+  pages:
+    headline: Pages
+    type: pagetable
+    parent: site
+    image: false
+    status: listed
+    columns:
+      title:
+        label: Title
+        text: '{{ page.title }}'
+        type: text
+        width: 1/2
+        sortable: true
+        searchable: true
+      template:
+        label: Template
+        text: '{{ page.intendedTemplate }}'
+        type: text
+        width: 1/2
+        sortable: true
+        searchable: true

@@ -1,0 +1,12 @@
+title: Markdown Field Plugin
+preset: page
+pages: false
+icon: 📝
+
+fields:
+  editor:
+    label: Text
+    type: markdown
+    size: large
+    font:
+      size: small

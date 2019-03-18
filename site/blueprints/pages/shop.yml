@@ -1,0 +1,13 @@
+title: Shop
+preset: pages
+
+icon: 🛍
+
+drafts:
+  extends: sections/products
+  headline: Unpublished Products
+
+listed:
+  extends: sections/products
+  headline: Published Products
+  layout: cards

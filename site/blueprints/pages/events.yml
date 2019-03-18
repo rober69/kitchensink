@@ -1,0 +1,15 @@
+title: Events
+preset: pages
+icon: 📅
+
+drafts:
+  extends: sections/events
+  headline: Unpublished events
+
+unlisted:
+  extends: sections/events
+  headline: Unlisted events
+
+listed:
+  extends: sections/events
+  headline: Published events

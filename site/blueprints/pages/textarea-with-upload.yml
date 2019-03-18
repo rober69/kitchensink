@@ -1,0 +1,24 @@
+title: Textarea with upload
+icon: 📰
+preset: page
+
+fields:
+  text:
+    label: Text
+    type: textarea
+    size: huge
+
+sidebar:
+  meta:
+    type: fields
+    fields:
+      date:
+        type: date
+        time: true
+        default: now
+      author:
+        type: users
+      tags: true
+
+  uploads:
+    type: files

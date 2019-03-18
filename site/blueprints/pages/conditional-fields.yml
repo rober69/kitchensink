@@ -1,0 +1,83 @@
+title: Conditional Fields
+icon: 🌱
+preset: page
+
+fields:
+  postType:
+    label: Post Type
+    type: radio
+    columns: 3
+    empty: false
+    options:
+      - Text
+      - Video
+      - Link
+
+  # text
+  text:
+    label: Text
+    type: textarea
+    size: large
+    when:
+      posttype: Text
+
+  # video
+  videoLink:
+    label: Youtube Link
+    type: url
+    placeholder: https://www.youtube.com/watch?v=KO25JYAaJC0
+    when:
+      posttype: Video
+  videoDescription:
+    label: Description
+    type: textarea
+    size: small
+    when:
+      posttype: Video
+
+  # link
+  link:
+    label: Link
+    type: url
+    when:
+      posttype: Link
+  linkText:
+    label: Link Text
+    type: text
+    when:
+      posttype: Link
+
+sidebar:
+  meta:
+    type: fields
+    fields:
+      date:
+        type: date
+      tags:
+        type: tags
+
+      # text
+      excerpt:
+        label: Excerpt
+        type: textarea
+        buttons: false
+        when:
+          posttype: Text
+
+      # video
+      videoSettings:
+        label: Video Settings
+        type: checkboxes
+        options:
+          - Autoplay
+          - Controls
+          - Loop
+        when:
+          posttype: Video
+
+      # link
+      linkTarget:
+        label: Open in new tab/window
+        type: toggle
+        when:
+          posttype: Link

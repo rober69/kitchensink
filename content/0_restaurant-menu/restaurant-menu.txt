@@ -1,0 +1,65 @@
+Title: Restaurant Menu
+
+----
+
+Starters: 
+
+- 
+  dish: Potatoe soup
+  description: "It's a hot fluid. Made from potatoes."
+  price: 7.99
+- 
+  dish: Wurst salad
+  description: "It's not really salad"
+  price: 5.99
+- 
+  dish: Chicken nuggets
+  description: Vegetarian
+  price: 10.99
+
+----
+
+Pasta: 
+
+- 
+  dish: Tortellini with some cheese sauce
+  description: We take the cheapest cheese
+  price: 19.99
+- 
+  dish: Lasagne
+  description: Minced meat / dough ratio = 1:12
+  price: 17.99
+- 
+  dish: Spaghetti alla Vongole
+  description: "Don't take them in all months with a R, I, J, D, E, S or N"
+  price: 22.99
+
+----
+
+Meat: 
+
+- 
+  dish: Beef
+  description: With Ketchup
+  price: 25.99
+- 
+  dish: Pigeon
+  description: With Ketchup
+  price: 26.99
+- 
+  dish: Pork
+  description: With Ketchup
+  price: 24.99
+
+----
+
+Desert: 
+
+- 
+  dish: Deep fried Mars
+  description: "Don't judge"
+  price: 3.99
+- 
+  dish: Nespresso
+  description: You can keep the capsule
+  price: 7.99

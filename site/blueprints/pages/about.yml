@@ -1,0 +1,65 @@
+title: About us
+
+icon: ☎️
+
+status:
+  draft: true
+  listed: true
+
+options:
+  url: false
+  delete: false
+
+columns:
+  - width: 1/2
+    fields:
+      company:
+        label: Company
+        type: text
+      street:
+        label: Street
+        type: text
+        width: 1/2
+      zip:
+        label: ZIP
+        type: text
+        width: 1/2
+      city:
+        label: City
+        type: text
+        width: 1/2
+      country:
+        label: Country
+        type: text
+        width: 1/2
+      email:
+        label: Email
+        type: email
+        width: 1/2
+      phone:
+        label: Phone
+        type: tel
+        width: 1/2
+      social:
+        label: On the web
+        type: structure
+        fields:
+          platform:
+            label: Platform
+            type: text
+            width: 1/2
+          url:
+            label: URL
+            type: url
+            width: 1/2
+  - width: 1/2
+    fields:
+      text:
+        label: Text
+        type: markdown
+        font:
+          size: regular
+          family: sans-serif
+          scaling: false
+        size: large
+

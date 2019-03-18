@@ -1,0 +1,45 @@
+Title: Conditional Fields
+
+----
+
+Posttype: Video
+
+----
+
+Text: 
+
+----
+
+Videolink: 
+
+----
+
+Videodescription: 
+
+----
+
+Link: 
+
+----
+
+Linktext: 
+
+----
+
+Date: 2019-03-18
+
+----
+
+Tags: 
+
+----
+
+Excerpt: 
+
+----
+
+Videosettings: 
+
+----
+
+Linktarget: false
