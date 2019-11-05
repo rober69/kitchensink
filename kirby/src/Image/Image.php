@@ -7,7 +7,6 @@ use Kirby\Http\Response;
 use Kirby\Toolkit\File;
 use Kirby\Toolkit\Html;
 use Kirby\Toolkit\Mime;
-use Kirby\Toolkit\Str;
 use Kirby\Toolkit\V;
 
 /**
@@ -18,13 +17,12 @@ use Kirby\Toolkit\V;
  *
  * @package   Kirby Image
  * @author    Bastian Allgeier <bastian@getkirby.com>
- * @link      http://getkirby.com
- * @copyright Bastian Allgeier
- * @license   MIT
-*/
+ * @link      https://getkirby.com
+ * @copyright Bastian Allgeier GmbH
+ * @license   https://opensource.org/licenses/MIT
+ */
 class Image extends File
 {
-
     /**
      * optional url where the file is reachable
      * @var string
@@ -44,8 +42,8 @@ class Image extends File
     /**
      * Constructor
      *
-     * @param string       $root
-     * @param string|null  $url
+     * @param string $root
+     * @param string|null $url
      */
     public function __construct(string $root = null, string $url = null)
     {
@@ -54,11 +52,11 @@ class Image extends File
     }
 
     /**
-     * Improved var_dump() output
+     * Improved `var_dump` output
      *
      * @return array
      */
-    public function __debuginfo(): array
+    public function __debugInfo(): array
     {
         return array_merge($this->toArray(), [
             'dimensions' => $this->dimensions(),
@@ -80,15 +78,15 @@ class Image extends File
     /**
      * Returns the dimensions of the file if possible
      *
-     * @return Dimensions
+     * @return \Kirby\Image\Dimensions
      */
-    public function dimensions(): Dimensions
+    public function dimensions()
     {
         if ($this->dimensions !== null) {
             return $this->dimensions;
         }
 
-        if (in_array($this->mime(), ['image/jpeg', 'image/png', 'image/gif'])) {
+        if (in_array($this->mime(), ['image/jpeg', 'image/jp2', 'image/png', 'image/gif', 'image/webp'])) {
             return $this->dimensions = Dimensions::forImage($this->root);
         }
 
@@ -114,9 +112,9 @@ class Image extends File
     /**
      * Returns the exif object for this file (if image)
      *
-     * @return Exif
+     * @return \Kirby\Image\Exif
      */
-    public function exif(): Exif
+    public function exif()
     {
         if ($this->exif !== null) {
             return $this->exif;
@@ -128,8 +126,8 @@ class Image extends File
     /**
      * Sends an appropriate header for the asset
      *
-     * @param  boolean          $send
-     * @return Response|string
+     * @param bool $send
+     * @return \Kirby\Http\Response|string
      */
     public function header(bool $send = true)
     {
@@ -149,7 +147,7 @@ class Image extends File
     }
 
     /**
-     * @param  array  $attr
+     * @param array $attr
      * @return string
      */
     public function html(array $attr = []): string
@@ -170,7 +168,7 @@ class Image extends File
     /**
      * Checks if the dimensions of the asset are portrait
      *
-     * @return boolean
+     * @return bool
      */
     public function isPortrait(): bool
     {
@@ -180,7 +178,7 @@ class Image extends File
     /**
      * Checks if the dimensions of the asset are landscape
      *
-     * @return boolean
+     * @return bool
      */
     public function isLandscape(): bool
     {
@@ -190,7 +188,7 @@ class Image extends File
     /**
      * Checks if the dimensions of the asset are square
      *
-     * @return boolean
+     * @return bool
      */
     public function isSquare(): bool
     {
@@ -200,6 +198,7 @@ class Image extends File
     /**
      * Runs a set of validations on the image object
      *
+     * @param array $rules
      * @return bool
      */
     public function match(array $rules): bool
