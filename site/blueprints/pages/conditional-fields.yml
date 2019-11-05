@@ -14,12 +14,21 @@ fields:
       - Link
 
   # text
+  intro:
+    label: Intro
+    type: textarea
+    size: small
+    spellcheck: false
+    when:
+      postType: Text
+
   text:
     label: Text
     type: textarea
     size: large
+    spellcheck: false
     when:
-      posttype: Text
+      postType: Text
 
   # video
   videoLink:
@@ -27,25 +36,25 @@ fields:
     type: url
     placeholder: https://www.youtube.com/watch?v=KO25JYAaJC0
     when:
-      posttype: Video
+      postType: Video
   videoDescription:
     label: Description
     type: textarea
     size: small
     when:
-      posttype: Video
+      postType: Video
 
   # link
   link:
     label: Link
     type: url
     when:
-      posttype: Link
+      postType: Link
   linkText:
     label: Link Text
     type: text
     when:
-      posttype: Link
+      postType: Link
 
 sidebar:
   meta:
@@ -57,27 +66,28 @@ sidebar:
         type: tags
 
       # text
+      hero:
+        label: Hero
+        type: files
+        multiple: false
+        query: site.find("photography").children.first.images
+        image:
+          cover: true
+        when:
+          postType: Text
       excerpt:
         label: Excerpt
         type: textarea
         buttons: false
         when:
-          posttype: Text
+          postType: Text
 
       # video
-      videoSettings:
-        label: Video Settings
-        type: checkboxes
-        options:
-          - Autoplay
-          - Controls
-          - Loop
+      videoCover:
+        label: Video Cover
+        type: files
+        multiple: false
+        query: site.find("photography").children.first.images
         when:
-          posttype: Video
+          postType: Video
 
-      # link
-      linkTarget:
-        label: Open in new tab/window
-        type: toggle
-        when:
-          posttype: Link

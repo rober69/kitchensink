@@ -7,6 +7,7 @@ fields:
     label: Text
     type: textarea
     size: huge
+    spellcheck: false
 
 sidebar:
   meta:

@@ -4,13 +4,14 @@ icon: 🖼
 
 sections:
   images:
-    headline: Images
+    headline: Gallery
     type: files
     template: gallery-image
     empty: No images yet
     layout: cards
-    size: small
+    size: tiny
     info: "{{ file.dimensions }}"
+    help: Images should have a ratio of about 3/2 to look best
     image:
       cover: false
       back: black
